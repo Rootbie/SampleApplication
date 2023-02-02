@@ -1,9 +1,9 @@
 pipeline {
     agent any
     
-    tools {
-        maven 'maven'   
-    }
+//     tools {
+//         maven 'maven'   
+//     }
 //     triggers{
 //         githubPush()
 //     }
@@ -11,7 +11,7 @@ pipeline {
     stages{
         stage("Build"){
             steps{
-                sh "mvn clean install"
+                sh "mvn clean package"
             }
         }
 
