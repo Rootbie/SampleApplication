@@ -1,9 +1,9 @@
 pipeline {
     agent any
     
-//     tools {
-//         maven 'maven'   
-//     }
+    tools {
+        maven 'maven'   
+    }
 //     triggers{
 //         githubPush()
 //     }
@@ -11,6 +11,7 @@ pipeline {
     stages{
         stage("Build"){
             steps{
+                git url:"https://github.com/Rootbie/SampleApplication"
                 sh "mvn clean package"
             }
         }
