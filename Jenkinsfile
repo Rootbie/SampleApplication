@@ -11,7 +11,6 @@ pipeline {
     stages{
         stage("Build"){
             steps{
-                git url:"https://github.com/Rootbie/SampleApplication"
                 sh "mvn clean package"
             }
         }
